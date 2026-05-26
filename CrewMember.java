@@ -41,8 +41,10 @@ public class CrewMember {
     }
 
     /* add setters */
-
-
+    
+    public void setName(String name){
+        this.name = name;
+    }
 
 
 
