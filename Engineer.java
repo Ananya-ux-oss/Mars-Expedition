@@ -1,56 +1,56 @@
 public class Engineer extends CrewMember {
-    private int systemsfixed;
+    private int systemFixed;
 
-    Engineer(String name, int age, int health, int stamina, int experiencelevel, "Enginner", 
-        int systemsfixed) {
-            super(name, age, health, stamina, experiencelevel,role);
-            this.systemsfixed = systemsfixed;
+    Engineer(String name, int age, int health, int stamina, int experienceLevel, String role,
+        int systemsFixed) {
+            super(name, age, health, stamina, experienceLevel,"Engineer");
+            this.systemFixed = systemsFixed;
             }
 
     /* getters */
 
     public int getsystemsfixed() {
-        return systemsfixed;
+        return systemFixed;
     }
 
     /*setters */
-    public void setSystemsfixed(int systemFixed){
-        this.systemsFixed = systemFixed;
+    public void setSystemFixed(int systemFixed){
+        this.systemFixed = systemFixed;
     }
 
     //METHODS
     public void repairSytem() {
         decreaseStamina(10);
-        systemfixed++;
+        systemFixed++;
         System.out.println(getName() + " is performing general system repairs.");
     }
 
-    public void Maintainequipment() {
-        decreaseStamina(15);
+    public void maintainEquipment() {
+        decreaseStamina(5);
         System.out.println(getName() + " is maintaining station equipment.");
     }
 
     //OVERLOADING
 
-    public void repairSytem(String Systemname) {
+    public void repairSytem(String systemName) {
         decreaseStamina(10);
-        systemfixed++;
-        System.out.println(getName() + " is repairing " + Systemname );
+        systemFixed++;
+        System.out.println(getName() + " is repairing " + systemName );
     }
 
     //OVERLOADING
 
-    public void repairSytem(Rover damagedrover) {
-        damagedrover.checksystemstatus();
-        damagedrover.repair();
+    public void repairSytem(Rover damagedRover) {
+        damagedRover.checkSystemStaus();
+        damagedRover.repair();
         decreaseStamina(10);
-        systemsfixed++;
+        systemFixed++;
 
-        System.out.println(getName() + " is repairing " + damagedrover );
+        System.out.println(getName() + " is repairing " + damagedRover );
     }
 
     @Override
-    public void PerformDuty() {
+    public void performDuty() {
         System.out.println(getName() + "  is repairing systems");
     }
 
@@ -61,8 +61,7 @@ public class Engineer extends CrewMember {
             +  "\nNAME: " + getName()
             +  "\nAGE: " + getAge()
             +  "\nHEALTH: " + getHealth()
-            +  "\nEXPERIENCE-LEVEL: " + getExperiencelevel()
-            +  "\nSYSTEMFIXED: " + systemsfixed        
+            +  "\nSYSTEMFIXED: " + systemFixed        
         );
     }
 

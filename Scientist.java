@@ -1,48 +1,45 @@
 public class Scientist extends CrewMember {
     private String specilization;
-    private int researchpoints;
+    public int researchPoints;
 
-    Scientist(String name, int age, int health, int stamina, int experiencelevel, String role, String specilization,
-        int researchpoints) {
-            super(name, age, health, stamina, experiencelevel,role);
+    Scientist(String name, int age, int health, int stamina, int experienceLevel, String role, String specilization,
+        int researchPoints) {
+            super(name, age, health, stamina, experienceLevel,"Scientist");
             this.specilization = specilization;
-            this.researchpoints = researchpoints;
+            this.researchPoints = researchPoints;
         }
 
     //getters
-    
     public String getSpecialization() {
         return specilization;
     }
 
-    public int researchPoints() {
-        return researchpoints;
+    public int getResearchPoints() {
+        return researchPoints;
     }
 
     /*setters */
-
     public void setSpecilization(String specilization) {
         this.specilization = specilization;
     }
     
-
-
+    //Methods
     public void conductResearch() {
-        researchpoints += 10;
-        DecreaseStamina(5);
+        researchPoints += 10;
+        decreaseStamina(5);
         System.out.println(getName() + " is conducting research.");
     }
 
     public void analyzeSample() {
-        researchpoints += 10;
-        DecreaseStamina(5);
-        System.out.println(getName() + " is analyzing Mars soil samples.");
+        researchPoints += 10;
+        decreaseStamina(5);
+        System.out.println(getName() + " is analyzing samples.");
     }
 
     @Override
     public void performDuty() {
-        System.out.println(getName() + " is conducting scientific research.");
-     }
+        conductResearch();
+    }
 
     @Override
     public void displayInfo() {
@@ -54,7 +51,7 @@ public class Scientist extends CrewMember {
                 + "\nStamina: " + getStamina()
                 + "\nEXPERIENCE-LEVEL: " + getExperienceLevel()
                 + "\nSPECILIZATION: " + specilization
-                + "\nresearchpoints: " + researchpoints        
+                + "\nresearchpoints: " + researchPoints        
         );
     }
 

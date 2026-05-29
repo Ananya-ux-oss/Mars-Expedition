@@ -1,23 +1,23 @@
 class ResearchProject {
-    private String projectname;
+    private String projectName;
     private int progress;
-    private boolean completed;
+    private boolean isCompleted;
 
-    ResearchProject(String projectname, int progress, boolean completed) {
-        this.projectname = projectname;
+    ResearchProject(String projectName, int progress, boolean isCompleted) {
+        this.projectName = projectName;
         this.progress = progress;
-        this.completed = completed;
+        this.isCompleted = isCompleted;
     }
 
     //GETTERS
-    public String getProjectname() {
-        return projectname;
+    public String getProjectName() {
+        return projectName;
     }
     public int getProgress() {
         return progress;
     }
-    public boolean getCompleted() {
-        return completed;
+    public boolean getIsCompleted() {
+        return isCompleted;
     }
 
     //METHODS
@@ -25,18 +25,19 @@ class ResearchProject {
         scientist.performDuty();
     }
     
-    public void completeResearch(){
+    public void completeResearch(Scientist scientist){
         progress = 100;
         isCompleted = true;
+        scientist.researchPoints++;
         System.out.println("Project Completed.");
     }
     
     public void showProgress() {
         System.out.println(
             "=== Research Project ===" +
-            "\nProject Name: " + projectname +
+            "\nProject Name: " + projectName +
             "\nProgress: " + progress + "%" +
-            "\nCompleted: " + completed
+            "\nCompleted: " + isCompleted
         );
     }
 }

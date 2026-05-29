@@ -12,11 +12,11 @@ public class MarsBase {
     
 
     MarsBase(String baseName, double oxygenLevel, double powerLevel, int foodSupply, int waterSupply, ArrayList<CrewMember> crew) {
-        this.basename = baseName;
-        this.oxygenlevel = oxygenLevel;
-        this.powerlevel = powerLevel;
-        this.foodsupply = foodSupply;
-        this.watersupply = waterSupply;
+        this.baseName = baseName;
+        this.oxygenLevel = oxygenLevel;
+        this.powerLevel = powerLevel;
+        this.foodSupply = foodSupply;
+        this.waterSupply = waterSupply;
         this.crew = crew;
     }
 
@@ -38,7 +38,7 @@ public class MarsBase {
     }
 
     public int getWaterSupply() {
-        return watersupply;
+        return waterSupply;
     }
 
     public ArrayList<CrewMember> getCrew() {
@@ -67,8 +67,7 @@ public class MarsBase {
     }
 
     //METHODS
-    public void addCrewMembers(CrewMember member) { //*HAS-A relationship --- MarsBase HAS CrewMember objects inside it MarsBase HAS CrewMembers */
-        
+    public void addCrewMembers(CrewMember member) {
         crew.add(member);
         System.out.println(member.getName() + " has joined the base");
     }
@@ -93,21 +92,25 @@ public class MarsBase {
             }
         } 
     }
-
-  public void EmergencyStatus() {
-      if(oxygenlevel < 20 || powerlevel < 20 || foodsupply < 20 || watersupply < 20) {
-          System.out.println("WARNING: Emergency detected in Mars Base!");
+    // need to improve this
+    public void emergencyStatus() {
+        if(oxygenLevel < 20 || powerLevel < 20 || foodSupply < 20 || waterSupply < 20) {
+            System.out.println("WARNING: Emergency detected in Mars Base!");
+        }
+        else {
+            System.out.println("All systems are stable");
+        }
     }
-      else {
-          System.out.println("All systems are stable");
-    }
-  }
-
+    // When you see this, I tried editing this.
     public void refillResources() {
-        oxygenLevel = 200000.00;
-        foodSupply = 100000;
-        waterSupply = 100000;
-        powerLevel = 100.00;
+        double maxOxygen = this.oxygenLevel;
+        int maxFood = this.foodSupply;
+        int maxWater = this.waterSupply;
+
+        this.oxygenLevel = maxOxygen;
+        this.foodSupply = maxFood;
+        this.waterSupply = maxWater;
+        this.powerLevel = 100.00;
         System.out.println("All resources have been refilled.");
     }
     

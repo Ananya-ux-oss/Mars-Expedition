@@ -1,23 +1,19 @@
 public class Mission {
-    private String missionname;
+    private String missionName;
     private String objective;
     private int difficulty;
-    private boolean completed;
+    private boolean isCompleted;
     
-    Mission(String missionname, String objective, int difficulty, boolean completed
-        )
-     {
-        this.missionname = missionname;
+    Mission(String missionName, String objective, int difficulty, boolean isCompleted) {
+        this.missionName = missionName;
         this.objective = objective;
         this.difficulty = difficulty;
-        this.completed = completed;
-        
+        this.isCompleted = isCompleted;     
     }
 
-    
-
-    public String getMissionname() {
-        return missionname;
+    //Getters
+    public String getMissionName() {
+        return missionName;
     }
     public String getObjective() {
         return objective;
@@ -25,38 +21,51 @@ public class Mission {
     public int getDifficulty() {
         return difficulty;
     }
-    public boolean getCompleted() {
-        return completed;
+    public boolean getIsCompleted() {
+        return isCompleted;
     }
 
-    public void completeMission(Rover rover, CrewMember person) { //works
-
-        if(rover.getoperations() && person.getStamina() > 35) {
-
-        completed = true;
-
-        System.out.println("Mission completed successfully!");
-
-        rover.decreaseBatteryLife(10);
-        rover.decreaseDurability(15);
-        person.decreaseStamina(10);
+    //SETTER
+    public void setDifficulty(int difficulty){
+        this.difficulty = difficulty;
     }
-    else {
-        completed = false;
-        System.out.println("Mission failed."); // might need to remove this 
-    }
-}
 
-  
-  public void displayMission() {
-    System.out.println(
-       "=== Mission Status Report ===" +
-        "\nMission Name: " + missionname +
-        "\nObjective: " + objective +
-        "\nDifficulty: " + difficulty +
-        "\nCompleted: " + completed +
-        "\nCrew stamina: " + person.getStamina() +
-        "\nRover batterylife: "  + rover.getBatterylife()
+    public void setIsCompleted(boolean isCompleted){
+        this.isCompleted = isCompleted;
+    }
+
+    //Methods
+
+    public void startMission(Rover rover, Pilot person){
+        person.operateRover(rover);
+    }
+
+    public void completeMission(Rover rover, Pilot person) { //works
+        if(rover.getIsOperational() && person.getStamina() > 35) {
+
+            isCompleted = true;
+            System.out.println("Mission completed successfully!");
+
+            rover.decreaseBatteryLife(10);
+            rover.decreaseDurability(15);
+            person.decreaseStamina(10);
+            person.missionCompleted += 1;
+        }
+        else {
+            isCompleted = false;
+            System.out.println("Mission failed."); // might need to remove this 
+        }
+    }
+
+    public void displayMission(Rover rover, Pilot person) {
+        System.out.println(
+            "=== Mission Status Report ===" +
+            "\nMission Name: " + missionName +
+            "\nObjective: " + objective +
+            "\nDifficulty: " + difficulty +
+            "\nCompleted: " + isCompleted +
+            "\nCrew stamina: " + person.getStamina() +
+            "\nRover batterylife: "  + rover.getBatteryLife()
         
     );
   }

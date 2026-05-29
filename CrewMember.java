@@ -11,7 +11,7 @@ public class CrewMember {
         this.age = age;
         this.health = health;
         this.stamina = stamina;
-        this.experiencelevel = experiencelevel;
+        this.experienceLevel = experienceLevel;
         this.role = role;
     }
 
@@ -21,7 +21,7 @@ public class CrewMember {
         return name;
     }
 
-    public int getAge(int time) {
+    public int getAge() {
         return age;
     }
 
@@ -34,7 +34,7 @@ public class CrewMember {
     }
 
     public int getExperienceLevel() {
-        return experiencelevel;
+        return experienceLevel;
     }
    
     public String getRole() {
@@ -72,11 +72,32 @@ public class CrewMember {
         System.out.println(name + "  is performing duties");
     }
 
-    public void rest() {
-        stamina += 20;
-        
+    public void decreaseStamina(int amount) {
+        stamina -= amount;
+        if(stamina < 20) {
+            stamina = 0;
+        }
+    }
+
+    public void increaseStamina(int amount) {
         if(stamina > 100) {
             stamina = 100;
+        } else{
+            stamina += amount;
+        }
+    }
+
+    public void increaseHealth(int hp) {
+        health += hp;
+        if(health >= 80) {
+            health = 80;
+        }
+    }
+
+    public void rest(int time) {
+        while(time >0){
+            increaseStamina(4);
+            time -=1;
         }
 
         System.out.println(name + " rested and recoveres stamina");
@@ -86,43 +107,19 @@ public class CrewMember {
         stamina += 10;
         health += 5;
 
-        System.out.println(name + "Ate a meal");
-    }
-
-    public void decreaseStamina(int amount) {
-        stamina -= amount;
-        if(stamina < 20) {
-            stamina = 0;
-        }
-
-    }
-
-    public void increaseStamina(int amount) {
-        if(stamina > 100) {
-            stamina = 100;
-        } else{
-            stamina += amount;
-        }
-
-    }
-
-    public void increaseHealth(int hp) {
-
-        health += hp;
-        if(health >= 80) {
-            health = 80;
-        }
+        System.out.println(name + "ate a meal");
     }
 
 
-    public void DisplayInfo() {
+    public void displayInfo() {
         System.out.println(
-                  " | NAME: " + name
-                + " | AGE: " + age
-                + " | HEALTH: " + health
-                + " | EXPERIENCE-LEVEL: " + experiencelevel
-                +  "| ROLE: " + role
-                
+            "===CREW-MEMBER==="
+            + "\n NAME: " + name
+            + "\n AGE: " + age
+            + "\n HEALTH: " + health
+            + "\n STAMINA: " + stamina
+            + "\n EXPERIENCE-LEVEL: " + experienceLevel
+            + "\n ROLE: " + role    
         );
     }
 

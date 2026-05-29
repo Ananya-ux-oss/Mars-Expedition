@@ -1,33 +1,33 @@
 public class Pilot extends CrewMember { 
-    private int navigationskill;
-    private int missioncompleted;
+    private int navigationSkill;
+    public int missionCompleted;
 
-    Pilot(String name, int age, int health, int stamina, int experiencelevel, String role, int navigationskill,
-        int missioncompleted) {
+    Pilot(String name, int age, int health, int stamina, int experiencelevel, String role, int navigationSkill,
+        int missionCompleted) {
         super(name, age, health, stamina, experiencelevel,"Pilot");
-        this.navigationskill = navigationskill;
-        this.missioncompleted = missioncompleted;
-        }
+        this.navigationSkill = navigationSkill;
+        this.missionCompleted = missionCompleted;
+    }
     
     //GETTERS
-    public int getNavigationskill() {
-        return navigationskill;
+    public int getNavigationSkill() {
+        return navigationSkill;
     }
-    public int Missioncompleted() {
-        return missioncompleted;
+    public int getMissionCompleted() {
+        return missionCompleted;
     }
 
     //METHODS
-    public void OperateRover(Rover rover) {
+    public void operateRover(Rover rover) {
         rover.drive();
-        if(rover.getOperations()){
-            DecreaseStamina(5);
+        if(rover.getIsOperational()){
+            decreaseStamina(5);
             System.out.println(getName() + "is operating the mars rover");
         }
     }
 
-    public void Exploresurface() {
-        DecreaseStamina(10);
+    public void exploreSurface() {
+        decreaseStamina(10);
         System.out.println(getName() + "is exploring mars surface");
     }
 
@@ -36,24 +36,22 @@ public class Pilot extends CrewMember {
         return getName();
     }
     
-    public void PerformDuty() {
+    @Override
+    public void performDuty() {
         System.out.println(getName() + "is carrying out pilot operations.");
-     }
-
-    
-     @Override
-    public void DisplayInfo() {
-        System.out.println(
-            "==== PILOT ===="
-            +  " | NAME: " + getName()
-            + " | AGE: " + getAge()
-            + " | HEALTH: " + getHealth()
-            + " | EXPERIENCE-LEVEL: " + getExperiencelevel()
-            +  "| ROLE: " + getRole() 
-            +  "| NAVIGATION-SkILLS " + navigationskill
-            +  "| MISSION-COMPLETED: " + missioncompleted        
-        );
     }
 
-    
+    @Override
+    public void displayInfo() {
+        System.out.println(
+            "==== PILOT ===="
+            + "\n NAME: " + getName()
+            + "\n AGE: " + getAge()
+            + "\n HEALTH: " + getHealth()
+            + "\n EXPERIENCE-LEVEL: " + getExperienceLevel()
+            + "\n ROLE: " + getRole() 
+            + "\n NAVIGATION-SkILLS " + navigationSkill
+            + "\n MISSION-COMPLETED: " + missionCompleted        
+        );
+    }   
 }
