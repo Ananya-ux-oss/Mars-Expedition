@@ -4,11 +4,12 @@ public class Pilot extends CrewMember {
 
     Pilot(String name, int age, int health, int stamina, int experiencelevel, String role, int navigationskill,
         int missioncompleted) {
-        super(name, age, health, stamina, experiencelevel,role);
+        super(name, age, health, stamina, experiencelevel,"Pilot");
         this.navigationskill = navigationskill;
         this.missioncompleted = missioncompleted;
         }
-
+    
+    //GETTERS
     public int getNavigationskill() {
         return navigationskill;
     }
@@ -16,17 +17,25 @@ public class Pilot extends CrewMember {
         return missioncompleted;
     }
 
-    public void OperateRover() {
-        DecreaseStamina(5);
-        System.out.println(getName() + "is operating the mars rover");
+    //METHODS
+    public void OperateRover(Rover rover) {
+        rover.drive();
+        if(rover.getOperations()){
+            DecreaseStamina(5);
+            System.out.println(getName() + "is operating the mars rover");
+        }
     }
 
     public void Exploresurface() {
-        DecreaseStamina(7);
+        DecreaseStamina(10);
         System.out.println(getName() + "is exploring mars surface");
     }
 
     @Override
+    public String toString(){
+        return getName();
+    }
+    
     public void PerformDuty() {
         System.out.println(getName() + "is carrying out pilot operations.");
      }
@@ -35,13 +44,14 @@ public class Pilot extends CrewMember {
      @Override
     public void DisplayInfo() {
         System.out.println(
-                  " | NAME: " + getName()
-                + " | AGE: " + getAge()
-                + " | HEALTH: " + getHealth()
-                + " | EXPERIENCE-LEVEL: " + getExperiencelevel()
-                +  "| ROLE: " + getRole() 
-                +  "| NAVIGATION-SkILLS " + navigationskill
-                +  "| MISSION-COMPLETED: " + missioncompleted        
+            "==== PILOT ===="
+            +  " | NAME: " + getName()
+            + " | AGE: " + getAge()
+            + " | HEALTH: " + getHealth()
+            + " | EXPERIENCE-LEVEL: " + getExperiencelevel()
+            +  "| ROLE: " + getRole() 
+            +  "| NAVIGATION-SkILLS " + navigationskill
+            +  "| MISSION-COMPLETED: " + missioncompleted        
         );
     }
 
