@@ -31,12 +31,12 @@ public class Engineer extends CrewMember {
 
     public void Repairsytem() {
         DecreaseStamina(10);
+        systemfixed++;
         System.out.println(getName() + " is performing general system repairs.");
     }
 
     public void Maintainequipment() {
         DecreaseStamina(15);
-        systemsfixed++;
         System.out.println(getName() + " is maintaining station equipment.");
     }
 
@@ -44,22 +44,19 @@ public class Engineer extends CrewMember {
 
     public void Repairsytem(String Systemname) {
         DecreaseStamina(10);
+        systemfixed++;
         System.out.println(getName() + " is repairing " + Systemname );
     }
 
     //Overloading
 
-    public void Repairsytem(Rover damagedrover) {
-        DecreaseStamina(10);
-        damagedrover.setDurability(80);
+    public void repairsystem(Rover damagedrover) {
+        damagedrover.checksystemstatus();
+        damagedrover.repair();
+        decreaseStamina(10);
+        systemsfixed++;
+
         System.out.println(getName() + " is repairing " + damagedrover );
-    }
-
-     /** over-loading(maybe add or leave out not sure)  */
-
-     public void Repairsytem(String Systemname, int urgency) {
-        DecreaseStamina(10);
-        System.out.println(getName() + " is repairing " + Systemname + "urgency: " + urgency);
     }
 
     @Override
@@ -68,8 +65,9 @@ public class Engineer extends CrewMember {
     }
 
     @Override
-    public void DisplayInfo() {
+    public void displayInfo() {
         System.out.println(
+                  
                   " | NAME: " + getName()
                 + " | AGE: " + getAge()
                 + " | HEALTH: " + getHealth()
