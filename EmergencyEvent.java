@@ -3,10 +3,10 @@ public class EmergencyEvents {
     private int severitylevel;
     private boolean isresolved;
 
-    EmergencyEvents(String emergencytype, int severitylevel, boolean resolved) {
+    EmergencyEvents(String emergencytype, int severitylevel, boolean isresolved) {
         this.emergencytype = emergencytype;
         this.severitylevel = severitylevel;
-        this.resolved = resolved;
+        this.isresolved = isresolved;
     }
 
     public String getEmergencytype() {
