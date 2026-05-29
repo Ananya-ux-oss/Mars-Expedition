@@ -8,6 +8,8 @@ public class Scientist extends CrewMember {
             this.specilization = specilization;
             this.researchpoints = researchpoints;
         }
+
+    //getters
     
     public String getSpecialization() {
         return specilization;
