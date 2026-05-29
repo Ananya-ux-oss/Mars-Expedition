@@ -2,9 +2,14 @@ public class Medic extends CrewMember {
     private int medicalskill;
     private int patientstreated;
 
+    @Override
+    public String toString() {
+        return  "Name: " + getName();         
+    }
+
     Medic(String name, int age, int health, int stamina, int experiencelevel, String role, int medicalskill, 
         int patientstreated) {
-        super(name, age, health, stamina, experiencelevel,role);
+        super(name, age, health, stamina, experiencelevel,"medic");
         this.medicalskill = medicalskill;
         this.patientstreated = patientstreated;
     }
@@ -20,15 +25,18 @@ public class Medic extends CrewMember {
     //* might have to change to a better code(method body)--- probably WILL */
 
     public void TreatCrewmember(CrewMember member) {
-        DecreaseStamina(5);
-        member.increaseStamina(20);
-        System.out.println(getName() + " treated a crew member (+10 health)");
+        decreaseStamina(10);
+        patientstreated++;
+        member.increaseHealth(20);
+        System.out.println("DOCTOR " + getName() + " treated " + member.getName());)
     }
 
 
     public void Checkhealthstatus( CrewMember cMember) { 
-         System.out.println(getName() + " checked " + cMember.getName() + "s" + 
-                       "health: " + cMember.getHealth());
+        decreaseStamina(5);
+         System.out.println("Doctor " + getName() + " checked " + cMember.getName() + "s" + 
+                       " health: \n" + cMember.getHealth()); 
+
 
     }
 
@@ -40,13 +48,15 @@ public class Medic extends CrewMember {
     @Override
     public void DisplayInfo() {
         System.out.println(
-                  " | NAME: " + getName()
-                + " | AGE: " + getAge()
-                + " | HEALTH: " + getHealth()
-                + " | EXPERIENCE-LEVEL: " + getExperiencelevel()
-                +  "| ROLE: " + getRole() 
-                +  "| MEDICAL-SKILL: " +  medicalskill
-                +  "| Patients-treated: " + patientstreated        
+                 "=== DOCTOR ===" +
+                  "\nNAME: " + getName()
+                + "\nAGE: " + getAge()
+                + "\nHEALTH: " + getHealth() 
+                + "\nStamina: " + getStamina()
+                + "\nEXPERIENCE-LEVEL: " + getExperienceLevel()
+                + "\nROLE: " + getRole() 
+                + "\nMEDICAL-SKILL: " +  medicalskill
+                + "\nPatients-treated: " + patientstreated        
         );
     }
 }
