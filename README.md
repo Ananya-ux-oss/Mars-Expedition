@@ -15,6 +15,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 ### Objects
 **Where**: `MissionControlSystem.java`
 | Concepts | File | Lines | What it Shows |
+|----------|------|-------|---------------|
 | Object Instantation | `MissionControlSystem.java` | - | ` ` this show the creation of a new object from class - |
 
 ## Encapsulation
@@ -22,6 +23,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 ### Access Modifiers
 **Where**:
 | Access Modifier | File | Lines | Description |
+|-----------------|------|-------|-------------|
 | Private | ` ` | - | `` |
 | Public | ` ` | - | ` ` |
 
