@@ -1,38 +1,39 @@
 public class Medic extends CrewMember {
-    private int medicalskill;
-    private int patientstreated;
+    private int medicalSkill;
+    private int patientsTreated;
 
     @Override
     public String toString() {
         return  "Name: " + getName();         
     }
 
-    Medic(String name, int age, int health, int stamina, int experiencelevel, String role, int medicalskill, 
-        int patientstreated) {
-        super(name, age, health, stamina, experiencelevel,"medic");
-        this.medicalskill = medicalskill;
-        this.patientstreated = patientstreated;
+    Medic(String name, int age, int health, int stamina, int experiencelevel, String role, int medicalSkill, 
+        int patientsTreated) {
+        super(name, age, health, stamina, experiencelevel,"Medic");
+        this.medicalSkill = medicalSkill;
+        this.patientsTreated = patientsTreated;
     }
 
-    public int getMedicalskill() {
-        return medicalskill;
+    public int getMedicalSkill() {
+        return medicalSkill;
     }
 
-    public int getPatientstreated() {
-        return patientstreated;
+    public int getPatientsTreated() {
+        return patientsTreated;
     }
 
     //* might have to change to a better code(method body)--- probably WILL */
 
-    public void TreatCrewmember(CrewMember member) {
-        decreaseStamina(10);
-        patientstreated++;
+    public void treatCrewmember(CrewMember member) {
         member.increaseHealth(20);
-        System.out.println("DOCTOR " + getName() + " treated " + member.getName());)
+        decreaseStamina(10);
+        patientsTreated++;
+        
+        System.out.println("DOCTOR " + getName() + " treated " + member.getName());
     }
 
 
-    public void Checkhealthstatus( CrewMember cMember) { 
+    public void checkHealthStatus( CrewMember cMember) { 
         decreaseStamina(5);
          System.out.println("Doctor " + getName() + " checked " + cMember.getName() + "s" + 
                        " health: \n" + cMember.getHealth()); 
@@ -41,12 +42,12 @@ public class Medic extends CrewMember {
     }
 
     @Override
-    public void PerformDuty() {
+    public void performDuty() {
         System.out.println(getName() + "  is with a patient");
     }
 
     @Override
-    public void DisplayInfo() {
+    public void displayInfo() {
         System.out.println(
                  "=== DOCTOR ===" +
                   "\nNAME: " + getName()
@@ -54,9 +55,8 @@ public class Medic extends CrewMember {
                 + "\nHEALTH: " + getHealth() 
                 + "\nStamina: " + getStamina()
                 + "\nEXPERIENCE-LEVEL: " + getExperienceLevel()
-                + "\nROLE: " + getRole() 
-                + "\nMEDICAL-SKILL: " +  medicalskill
-                + "\nPatients-treated: " + patientstreated        
+                + "\nMEDICAL-SKILL: " +  medicalSkill 
+                + "\nPatients-treated: " + patientsTreated       
         );
     }
 }
