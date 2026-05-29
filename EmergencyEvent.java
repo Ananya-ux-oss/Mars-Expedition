@@ -1,7 +1,7 @@
 public class EmergencyEvents {
     private String emergencytype;
     private int severitylevel;
-    private boolean resolved;
+    private boolean isresolved;
 
     EmergencyEvents(String emergencytype, int severitylevel, boolean resolved) {
         this.emergencytype = emergencytype;
@@ -18,7 +18,7 @@ public class EmergencyEvents {
     }
 
     public boolean getResolved() {
-        return resolved;
+        return isresolved;
     }
 
   public void triggerAlarm() {
@@ -31,7 +31,7 @@ public class EmergencyEvents {
 
     public void triggerAlarm(MarsBase base) {
     base.EmergencyStatus();
-    resolved = false;
+    isresolved = false;
 
     System.out.println(
            
@@ -44,7 +44,7 @@ public class EmergencyEvents {
 
 
     public void resolveEmergency() {
-    if (resolved) {
+    if (isresolved) {
         System.out.println("Emergency is resolved.");
         return;
     }
@@ -58,7 +58,7 @@ public class EmergencyEvents {
       "=== Emergency Status ===" +
         "\nType: " + emergencytype +
         "\nSeverity Level: " + severitylevel +
-        "\nResolved: " + resolved
+        "\nResolved: " + isresolved
     );
 }
 
