@@ -5,7 +5,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 ## Classes and Objects
 
 ### Class
-**Where**: `CrewMember.java`, `MissisonControlSystem.java`
+**Where**: `CrewMember.java`
 | Concept | File | Lines | What It Shows |
 |---------|------|-------|---------------|
 | Class Definition | `CrewMember.java` | _ | `public class CrewMember{}` - defines a public class named CrewMember |
@@ -13,9 +13,9 @@ This is a section highlighting where in the document core OOP concepts are outli
 | Constructor | `CrewMember.java` | - | `public CrewMember(...)` allows to form a method to initialize objects|
 
 ### Objects
-**Where**:
+**Where**: `MissionControlSystem.java`
 | Concepts | File | Lines | What it Shows |
-| Object Instantation | ` ` | - | ` ` this show the creation of a new object from class - |
+| Object Instantation | `MissionControlSystem.java` | - | ` ` this show the creation of a new object from class - |
 
 ## Encapsulation
 
