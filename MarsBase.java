@@ -1,43 +1,43 @@
 import java.util.ArrayList;
 
 public class MarsBase {
-    private String basename ;
-    private double oxygenlevel ;
-    private double powerlevel ;
-    private int foodsupply ;
-    private int watersupply;
+    private String baseName ;
+    private double oxygenLevel ;
+    private double powerLevel ;
+    private int foodSupply ;
+    private int waterSupply;
     private ArrayList<CrewMember> crew; //*polymorphism-- storing different object types in one list Same parameter type (CrewMember)Different actual objects */
 //*rew.add(new Scientist()); crew.add(new Engineer()); crew.add(new Medic()); */
     
     
 
-    MarsBase(String basename, double oxygenlevel, double powerlevel, int foodsupply, int watersupply, ArrayList<CrewMember> crew) {
-        this.basename = basename;
-        this.oxygenlevel = oxygenlevel;
-        this.powerlevel = powerlevel;
-        this.foodsupply = foodsupply;
-        this.watersupply = watersupply;
+    MarsBase(String baseName, double oxygenLevel, double powerLevel, int foodSupply, int waterSupply, ArrayList<CrewMember> crew) {
+        this.basename = baseName;
+        this.oxygenlevel = oxygenLevel;
+        this.powerlevel = powerLevel;
+        this.foodsupply = foodSupply;
+        this.watersupply = waterSupply;
         this.crew = crew;
     }
 
     //GETTERS
-    public String getBasename() {
-        return basename;
+    public String getBaseName() {
+        return baseName;
     }
 
-    public double getOxygenlevel() {
-        return oxygenlevel;
+    public double getOxygenLevel() {
+        return oxygenLevel;
     }
 
-    public double getPowerlevel() {
-        return powerlevel;
+    public double getPowerLevel() {
+        return powerLevel;
     }
 
-    public int getFoodsupply() {
-        return foodsupply;
+    public int getFoodSupply() {
+        return foodSupply;
     }
 
-    public int getWatersupply() {
+    public int getWaterSupply() {
         return watersupply;
     }
 
@@ -67,7 +67,7 @@ public class MarsBase {
     }
 
     //METHODS
-    public void Addcrewmembers(CrewMember member) { //*HAS-A relationship --- MarsBase HAS CrewMember objects inside it MarsBase HAS CrewMembers */
+    public void addCrewMembers(CrewMember member) { //*HAS-A relationship --- MarsBase HAS CrewMember objects inside it MarsBase HAS CrewMembers */
         
         crew.add(member);
         System.out.println(member.getName() + " has joined the base");
@@ -94,7 +94,6 @@ public class MarsBase {
         } 
     }
 
-/* might possibli contradict with emergencyeven class */
   public void EmergencyStatus() {
       if(oxygenlevel < 20 || powerlevel < 20 || foodsupply < 20 || watersupply < 20) {
           System.out.println("WARNING: Emergency detected in Mars Base!");
@@ -114,11 +113,11 @@ public class MarsBase {
     
     public void showBaseStatus() {
         System.out.println(
-            "\nBase Name: " + basename +
-            "\nOxygen: " + oxygenlevel +
-            "\nPower: " + powerlevel +
-            "\nFood: " + foodsupply +
-            "\nWater: " + watersupply +
+            "\nBase Name: " + baseName +
+            "\nOxygen: " + oxygenLevel +
+            "\nPower: " + powerLevel +
+            "\nFood: " + foodSupply +
+            "\nWater: " + waterSupply +
             "\nCrew Count: " + crew.size());
     }  
 }
