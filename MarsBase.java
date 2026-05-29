@@ -7,7 +7,7 @@ public class MarsBase {
     private int foodSupply ;
     private int waterSupply;
     private ArrayList<CrewMember> crew; //*polymorphism-- storing different object types in one list Same parameter type (CrewMember)Different actual objects */
-//*rew.add(new Scientist()); crew.add(new Engineer()); crew.add(new Medic()); */
+//*crew.add(new Scientist()); crew.add(new Engineer()); crew.add(new Medic()); */
     
     
 
