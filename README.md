@@ -63,6 +63,7 @@ Note: JDK 26 allows for automatic upcasting
 **Where**: `MissionControlSystem.java`
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
+| Applied Upcasting | `MissionControlSystem.java` | 3 | `CrewMember member1 = new Pilot(...)` |
 
 
 
