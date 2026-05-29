@@ -13,47 +13,46 @@ public class Scientist extends CrewMember {
         return specilization;
     }
 
-    public int researchpoints() {
+    public int researchPoints() {
         return researchpoints;
     }
 
-    /* Add setters */
+    /*setters */
 
-
-
-
-
-
+    public void setSpecilization(String specilization) {
+        this.specilization = specilization;
+    }
     
 
-    public void conductresearch() {
+
+    public void conductResearch() {
         researchpoints += 10;
         DecreaseStamina(5);
         System.out.println(getName() + " is conducting research.");
     }
 
-    public void AnalyzeSample() {
+    public void analyzeSample() {
         researchpoints += 10;
         DecreaseStamina(5);
         System.out.println(getName() + " is analyzing Mars soil samples.");
-        System.out.println("New discoveries recorded!");
     }
 
     @Override
-    public void PerformDuty() {
+    public void performDuty() {
         System.out.println(getName() + " is conducting scientific research.");
      }
 
     @Override
-    public void DisplayInfo() {
+    public void displayInfo() {
         System.out.println(
-                  " | NAME: " + getName()
-                + " | AGE: " + getAge()
-                + " | HEALTH: " + getHealth()
-                + " | EXPERIENCE-LEVEL: " + getExperiencelevel()
-                +  "| ROLE: " + getRole() 
-                +  "| SPECILIZATION: " + specilization
-                +  "| researchpoints: " + researchpoints        
+                    "=== Scientist ===" 
+                + "\nNAME: " + getName()
+                + "\nAGE: " + getAge()
+                + "\nHEALTH: " + getHealth()
+                + "\nStamina: " + getStamina()
+                + "\nEXPERIENCE-LEVEL: " + getExperienceLevel()
+                + "\nSPECILIZATION: " + specilization
+                + "\nresearchpoints: " + researchpoints        
         );
     }
 
