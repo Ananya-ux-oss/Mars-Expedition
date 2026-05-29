@@ -9,7 +9,7 @@ public class MissionControlSystem {
         Engineer engineer = new Engineer("Maria", 32, 85, 75, 6, "Engineer", 10);
 
         ArrayList<CrewMember> crewList = new ArrayList<>();
-        MarsBase marsBase = new MarsBase("Ares Base", 100.0, 100.0, 50, 50, crewList);
+        MarsBase MarsStation = new MarsBase("Ares Base", 100.0, 100.0, 50, 50, crewList);
 
         Medic medic = new Medic("John", 29, 90, 80, 4, "Medic", 7, 3);
 
@@ -22,6 +22,13 @@ public class MissionControlSystem {
         ResearchProject researchProject = new ResearchProject("Soil Analysis", 40, false);
         
         Mission mission = new Mission("Explore Crater", "Collect samples", 3, false);
-        
+
+
+        MarsStation.addCrewMembers(member1);
+        MarsStation.addCrewMembers(crewMember);
+        MarsStation.addCrewMembers(engineer);
+        MarsStation.addCrewMembers(medic);
+        MarsStation.addCrewMembers(pilot);
+        MarsStation.addCrewMembers(scientist);
     }
 }
