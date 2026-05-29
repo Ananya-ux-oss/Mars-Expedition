@@ -3,10 +3,10 @@ public class CrewMember {
     private int age;
     private int health;
     private int stamina;
-    private int experiencelevel;
+    private int experienceLevel;
     private String role;
 
-    CrewMember(String name, int age, int health, int stamina, int experiencelevel, String role) {
+    CrewMember(String name, int age, int health, int stamina, int experienceLevel, String role) {
         this.name = name;
         this.health = health;
         this.stamina = stamina;
@@ -32,7 +32,7 @@ public class CrewMember {
         return stamina;
     }
 
-    public int getExperiencelevel() {
+    public int getExperienceLevel() {
         return experiencelevel;
     }
    
@@ -67,11 +67,11 @@ public class CrewMember {
     }
 
     //METHODS
-    public void PerformDuty() {
+    public void performDuty() {
         System.out.println(name + "  is performing duties");
     }
 
-    public void Rest() {
+    public void rest() {
         stamina += 20;
         
         if(stamina > 100) {
@@ -81,14 +81,14 @@ public class CrewMember {
         System.out.println(name + " rested and recoveres stamina");
     }
 
-    public void Eat() {
+    public void eat() {
         stamina += 10;
         health += 5;
 
         System.out.println(name + "Ate a meal");
     }
 
-    public void DecreaseStamina(int amount) {
+    public void decreaseStamina(int amount) {
         stamina -= amount;
         if(stamina < 0) {
             stamina = 0;
@@ -104,6 +104,15 @@ public class CrewMember {
         }
 
     }
+
+    public void increaseHealth(int hp) {
+
+        health += hp;
+        if(health >= 80) {
+            health = 80;
+        }
+    }
+
 
     public void DisplayInfo() {
         System.out.println(
