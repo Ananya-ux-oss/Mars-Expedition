@@ -18,7 +18,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 **Where**: `MissionControlSystem.java`
 | Concepts | File | Lines | What it Shows |
 |----------|------|-------|---------------|
-| Object Instantation | `MissionControlSystem.java` | - | ` ` this show the creation of a new object from class - |
+| Object Instantation | `MissionControlSystem.java` | 3 | ` ` this show the creation of a new object from class `Scientist.java` |
 
 ## Encapsulation
 
@@ -33,9 +33,10 @@ This is a section highlighting where in the document core OOP concepts are outli
 **Where**: `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java`
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
-| extends keyword |  |  |  |
-| Superclass | `CrewMember.java` |  |  |
-| Subclasses | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` |  |  |
+| extends keyword | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 1 | `public class Engineer extends CrewMember` etc|
+| Superclass | `CrewMember.java` | 1 |  |
+| Subclasses | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 2-5 | `public class Engineer extends CrewMember{}` etc... The classes have additional attributes other than mentioned in the superclass|
+| `super()` Method | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 5/6 | `super(name, age, health, stamina, experiencelevel,"Engineer");` etc|
 | Code Reusability |  |  |  |
 
 ## Polymorphism
