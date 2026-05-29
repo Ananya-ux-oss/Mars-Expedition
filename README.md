@@ -39,24 +39,35 @@ This is a section highlighting where in the document core OOP concepts are outli
 ## Polymorphism
 
 ### Overriding (Run-time Polymorphism)
-**Where**: 
+**Where**: `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java`, `CrewMember`
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
+| Main Class Method | `CrewMember.java` |  | `System.out.println(name + "  is performing duties");` |
+| Sub Class Method | `Scientist.java` | 40 - 43 | `public void performDuty() {conductResearch();}` |
 
 
 ### Overloading (Compile-time Polymorphism)
-**Where**: 
+**Where**: `Engineer.java`
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
+| `repairSystem()` | `Engineer.java` | 22 - 26 | `public void repairSytem() {...}` |
+| `repairSytem(String Systemname)` | `Engineer.java` | 35 - 39 |  `public void repairSytem(String Systemname) {...}` |
+| `repairSytem(Rover damagedrover)` | `Engineer.java` | 43 - 49 | `public void repairSytem(Rover damagedrover) {}` |
 
 
 ### Upcasting
-JDK 26 allows for automatic upcasting
-**Where**: 
+Note: JDK 26 allows for automatic upcasting
+**Where**: `MissionControlSystem.java`
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
 
 
+
+## How to Use It
+
+1. Compile: `javac *.java`
+2. Run: `java MissionControlSystem`
+3. The app comes pre-loaded with sample data 
 
 
 
