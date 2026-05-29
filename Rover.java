@@ -4,6 +4,12 @@ public class Rover {
     private int durability;
     private boolean isoperational;
 
+     @Override 
+    public String toString() {
+        return  "rover: " +   rovername;
+                
+    }
+
     Rover(String rovername, int batterylife, int durability, boolean isoperational) {
         this.rovername = rovername;
         this.batterylife = batterylife;
@@ -53,18 +59,22 @@ public class Rover {
     }
 
    
-
     public void decreaseDurability(int damage) {
         this.durability -= damage;
     }
 
    public void drive() {
-    if (!isoperational) {
+     CheckSystemStaus();
+    
+    if(!isoperational) {
         System.out.println("Cannot drive. Rover is not operational.");
-        return; //* without this even if the rover is not working it will still reduce durability and battery life */
-    }
+        return;
+        }
 
-    System.out.println("Rover is driving across terrain.");
+    decreaseBatteryLife(10);
+    decreaseDurability(5);
+
+    System.out.println("Rover is driving across terrain."); 
     }
 
     public void Recharge() {
@@ -80,27 +90,34 @@ public class Rover {
     }
 
     public void CheckSystemStaus() {
-        if(durability <= 0 || batterylife <= 3) { 
-            durability = 0;
+        if(durability <= 50 && batterylife <= 50) { 
             isoperational = false;
             System.out.println("System failed! Rover is not operational.");
+            return;
         }
-        else if(durability <= 30) {
-            isoperational = true;
+        if(durability <= 30) {
+            isoperational = true;  
             System.out.println("Warning: Rover is critically damaged.");
+        }
+        
+        if(batterylife <= 30) {
+            isoperational = false; 
+            System.out.println("Warning: Rovers battery life is low.");
+
         }
         else {
             isoperational = true;
-            System.out.println("Rover is fully operational.");
+             System.out.println("Rover is fully operational.");
         }
     }
 
     public void displayInfo() {
         System.out.println(
-                  " | rovername: " + rovername
-                + " | battrylife: " + batterylife
-                + " | durability: " + durability
-                + " | operational: " + isoperational                
+            n       "=== ROVER INFO ===" +
+                  "\n rovername: " + rovername
+                + " \n battrylife: " + batterylife
+                + " \n durability: " + durability
+                + " \n operational: " + isoperational                      
         );
     }
 }
