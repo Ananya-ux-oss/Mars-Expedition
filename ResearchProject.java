@@ -9,6 +9,7 @@ class ResearchProject {
         this.completed = completed;
     }
 
+    //GETTERS
     public String getProjectname() {
         return projectname;
     }
@@ -19,30 +20,23 @@ class ResearchProject {
         return completed;
     }
 
-    public void conductResearch() {
-    if (completed) {
-        System.out.println("Project already completed.");
-        return;
+    //METHODS
+    public void startResearch(Scientist scientist){
+        scientist.performDuty();
     }
-    progress += 10;
-
-    if (progress >= 100) {
+    
+    public void completeResearch(){
         progress = 100;
-        completed = true;
-        System.out.println("Research project completed!");
-    } else {
-        System.out.println("Research in progress... " + progress + "%");
+        isCompleted = true;
+        System.out.println("Project Completed.");
     }
-  }
-
-  public void showProgress() {
-    System.out.println(
-        "=== Research Project ===" +
-        "\nProject Name: " + projectname +
-        "\nProgress: " + progress + "%" +
-        "\nCompleted: " + completed
-    );
-}
-
-
+    
+    public void showProgress() {
+        System.out.println(
+            "=== Research Project ===" +
+            "\nProject Name: " + projectname +
+            "\nProgress: " + progress + "%" +
+            "\nCompleted: " + completed
+        );
+    }
 }
