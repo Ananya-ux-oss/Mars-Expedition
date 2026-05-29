@@ -10,8 +10,8 @@ This is a section highlighting where in the document core OOP concepts are outli
 |---------|------|-------|---------------|
 | Class Definition | `CrewMember.java` | 1 | `public class CrewMember{}` - defines a public class named CrewMember |
 | Attributes | `CrewMember.java` | 2-7| `private String name; private int age; private int health;` etc are the attibutes describing a crew member |
-| Constructor | `CrewMember.java` | 9 | `public CrewMember(...)` allows to form a method to initialize objects|
-| Methods | `CrewMember.java` | 71 - 127 | `public void increaseHealth(int hp) {}` |
+| Constructor | `CrewMember.java` | 9-16 | `public CrewMember(...)` allows to form a method to initialize objects|
+| Methods | `CrewMember.java` | 71-124 | `public void increaseHealth(int hp) {}` |
 
 
 ### Objects
@@ -23,21 +23,23 @@ This is a section highlighting where in the document core OOP concepts are outli
 ## Encapsulation
 
 ### Access Modifiers
-**Where**: `Pilot.java`
+**Where**: `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java`, `CrewMember`,`MarsBase.java`,`Mission.java`,`Rover.java`,`ResearchProject.java`
 | Access Modifier | File | Lines | Description |
 |-----------------|------|-------|-------------|
 | Private | `Pilot.java` | 2 | `private int navigationSkill;` |
 | Public | `Pilot.java` | 3 | `public int missionsCompleted;` |
+| Getter | `CrewMember.java` | 20-42 | `public int getExperienceLevel() {return experienceLevel;}` |
+| Setter | `CrewMember.java` | 46-68 | `public void setExperienceLevel(int experianceLevel) {this.experienceLevel = experianceLevel;}` |
 
 ## Inheritance
 **Where**: `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java`
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
 | extends keyword | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 1 | `public class Engineer extends CrewMember` etc|
-| Superclass | `CrewMember.java` | 1 |  |
+| Superclass | `CrewMember.java` | 1 | `public class CrewMember {...}` |
 | Subclasses | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 2-5 | `public class Engineer extends CrewMember{}` etc... The classes have additional attributes other than mentioned in the superclass|
 | `super()` Method | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 5-6 | `super(name, age, health, stamina, experiencelevel,"Engineer");` etc|
-| Code Reusability |  |  |  |
+| Code Reusability | `Mission.java` | 44 | `..person.getStamina() > 35` The getStamina() method belongs to CrewMember but without defining in the Pilot class we use it. |
 
 ## Polymorphism
 
