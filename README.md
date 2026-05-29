@@ -8,9 +8,11 @@ This is a section highlighting where in the document core OOP concepts are outli
 **Where**: `CrewMember.java`
 | Concept | File | Lines | What It Shows |
 |---------|------|-------|---------------|
-| Class Definition | `CrewMember.java` | _ | `public class CrewMember{}` - defines a public class named CrewMember |
-| Attributes | `CrewMember.java` | - | `private String name; private int age; private int health;` etc are the attibutes describing a crew member |
-| Constructor | `CrewMember.java` | - | `public CrewMember(...)` allows to form a method to initialize objects|
+| Class Definition | `CrewMember.java` | 1 | `public class CrewMember{}` - defines a public class named CrewMember |
+| Attributes | `CrewMember.java` | 2-7| `private String name; private int age; private int health;` etc are the attibutes describing a crew member |
+| Constructor | `CrewMember.java` | 9 | `public CrewMember(...)` allows to form a method to initialize objects|
+| Methods | `CrewMember.java` | 71 - 127 | `public void increaseHealth(int hp) {}` |
+
 
 ### Objects
 **Where**: `MissionControlSystem.java`
