@@ -45,8 +45,8 @@ This is a section highlighting where in the document core OOP concepts are outli
 **Where**: `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java`, `CrewMember`
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
-| Main Class Method | `CrewMember.java` |  | `System.out.println(name + "  is performing duties");` |
-| Sub Class Method | `Scientist.java` | 40 - 43 | `public void performDuty() {conductResearch();}` |
+| Main Class Method | `CrewMember.java` |  72  | `System.out.println(name + "  is performing duties");` |
+| Sub Class Method | `Scientist.java` | 43 - 45 | `public void performDuty() {conductResearch();}` |
 
 
 ### Overloading (Compile-time Polymorphism)
@@ -55,7 +55,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 |---------|------|------|---------------|
 | `repairSystem()` | `Engineer.java` | 22 - 26 | `public void repairSytem() {...}` |
 | `repairSytem(String Systemname)` | `Engineer.java` | 35 - 39 |  `public void repairSytem(String Systemname) {...}` |
-| `repairSytem(Rover damagedrover)` | `Engineer.java` | 43 - 49 | `public void repairSytem(Rover damagedrover) {}` |
+| `repairSytem(Rover damagedrover)` | `Engineer.java` | 43 - 50 | `public void repairSytem(Rover damagedrover) {}` |
 
 
 ### Upcasting
