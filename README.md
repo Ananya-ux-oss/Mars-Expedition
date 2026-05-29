@@ -21,11 +21,41 @@ This is a section highlighting where in the document core OOP concepts are outli
 ## Encapsulation
 
 ### Access Modifiers
-**Where**:
+**Where**: `Pilot.java`
 | Access Modifier | File | Lines | Description |
 |-----------------|------|-------|-------------|
-| Private | ` ` | - | `` |
-| Public | ` ` | - | ` ` |
+| Private | `Pilot.java` | 2 | `private int navigationSkill;` |
+| Public | `Pilot.java` | 3 | `public int missionsCompleted;` |
+
+## Inheritance
+**Where**: `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java`
+| Concept | File | Line | What It Shows |
+|---------|------|------|---------------|
+| extends keyword |  |  |  |
+| Superclass | `CrewMember.java` |  |  |
+| Subclasses | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` |  |  |
+| Code Reusability |  |  |  |
+
+## Polymorphism
+
+### Overriding (Run-time Polymorphism)
+**Where**: 
+| Concept | File | Line | What It Shows |
+|---------|------|------|---------------|
+
+
+### Overloading (Compile-time Polymorphism)
+**Where**: 
+| Concept | File | Line | What It Shows |
+|---------|------|------|---------------|
+
+
+### Upcasting
+JDK 26 allows for automatic upcasting
+**Where**: 
+| Concept | File | Line | What It Shows |
+|---------|------|------|---------------|
+
 
 
 
