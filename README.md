@@ -1,5 +1,6 @@
 # Mars-Expedition
-A Java-based Mars colony survival simulation that models astronaut crew management, rover operations, research missions, emergency events, and resource systems within a realistic Mars base environment
+A Java-based Mars colony survival simulation that models astronaut crew management, rover operations, research missions, emergency events, and resource systems within Mars base environment.
+The scientist does research, the pilot drives the rover, the engineer fixes the internal system in the base while the medic treats all. 
 # Requirments Mapping
 This is a section highlighting where in the document core OOP concepts are outlined.
 ## Classes and Objects
@@ -18,7 +19,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 **Where**: `MissionControlSystem.java`
 | Concepts | File | Lines | What it Shows |
 |----------|------|-------|---------------|
-| Object Instantation | `MissionControlSystem.java` | 3 | ` ` this show the creation of a new object from class `Scientist.java` |
+| Object Instantation | `MissionControlSystem.java` | 3-24 | `CrewMember crewMember = new CrewMember("Alex", 30, 80, 70, 5, "Crew");` this show the creation of a new object from class `Scientist.java` |
 
 ## Encapsulation
 
