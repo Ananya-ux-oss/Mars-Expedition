@@ -40,23 +40,33 @@ public class CrewMember {
         return role;
     }
 
-    /* add setters */
+    /* SETTERS */
     
     public void setName(String name){
         this.name = name;
     }
 
+    public void setAge(int age){
+        this.age = age;
+    }    
 
+    public void setHealth(int health){
+        this.health = health;
+    }
 
+    public void setStamina(int stamina){
+        this.stamina = stamina;
+    }
 
+    public void setExperianceLevel(int experienceLevel){
+        this.experienceLevel = experienceLevel;
+    }
 
+    public void setRole(String role){
+        this.role = role;
+    }
 
-
-
-
-
-
-
+    //METHODS
     public void PerformDuty() {
         System.out.println(name + "  is performing duties");
     }
