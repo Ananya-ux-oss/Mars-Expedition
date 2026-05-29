@@ -45,7 +45,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 **Where**: `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java`, `CrewMember`
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
-| Main Class Method | `CrewMember.java` | 72 | `System.out.println(name + "  is performing duties");` |
+| Main Class Method | `CrewMember.java` |  72  | `System.out.println(name + "  is performing duties");` |
 | Sub Class Method | `Scientist.java` | 43 - 45 | `public void performDuty() {conductResearch();}` |
 
 
