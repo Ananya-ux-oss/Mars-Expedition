@@ -1,13 +1,11 @@
 public class Engineer extends CrewMember {
-    private String repairskill;
     private int systemsfixed;
 
-    Engineer(String name, int age, int health, int stamina, int experiencelevel, String role, String repairskill,
+    Engineer(String name, int age, int health, int stamina, int experiencelevel, String role, 
         int systemsfixed) {
             super(name, age, health, stamina, experiencelevel,role);
             this.repairskill = repairskill;
-            this.systemsfixed = systemsfixed;
-        }
+            }
 
     /* getters */
 
@@ -19,7 +17,7 @@ public class Engineer extends CrewMember {
         return systemsfixed;
     }
 
-    /* ADDsetters */
+    /*setters */
     public void setSystemsFixed(int systemFixed){
         this.systemsFixed = systemFixed;
     }
@@ -69,7 +67,6 @@ public class Engineer extends CrewMember {
             + "\n HEALTH: " + getHealth()
             + "\n EXPERIENCE-LEVEL: " + getExperiencelevel()
             +  "\n ROLE: " + getRole() 
-            +  "\n REPAIR SKILLD: " +  repairskill
             +  "\n SYSTEMFIXED: " + systemsfixed        
         );
     }
