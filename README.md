@@ -36,7 +36,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 | extends keyword | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 1 | `public class Engineer extends CrewMember` etc|
 | Superclass | `CrewMember.java` | 1 |  |
 | Subclasses | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 2-5 | `public class Engineer extends CrewMember{}` etc... The classes have additional attributes other than mentioned in the superclass|
-| `super()` Method | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 5/6 | `super(name, age, health, stamina, experiencelevel,"Engineer");` etc|
+| `super()` Method | `Engineer.java`, `Medic.java`,`Pilot.java`,`Scientist.java` | 5-6 | `super(name, age, health, stamina, experiencelevel,"Engineer");` etc|
 | Code Reusability |  |  |  |
 
 ## Polymorphism
