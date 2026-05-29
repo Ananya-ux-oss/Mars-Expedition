@@ -1,4 +1,4 @@
-class EmergencyEvents {
+public class EmergencyEvents {
     private String emergencytype;
     private int severitylevel;
     private boolean resolved;
@@ -21,21 +21,31 @@ class EmergencyEvents {
         return resolved;
     }
 
-    public void triggerEmergency() {
+  public void triggerAlarm() {
+
+        System.out.println("Critical warning: resiurces depleted");
+
+    }
+
+    //overload
+
+    public void triggerAlarm(MarsBase base) {
+    base.EmergencyStatus();
     resolved = false;
 
     System.out.println(
            
-           "=== Mars Base Resources ===" +
-           "type" + emergencytype +
-           "severity level" + severitylevel
+           "=== EMERGENCY ALERT ===\n" +
+           "\nEmergency-type: " + emergencytype +
+           "\nseverity level: " + severitylevel
 
-    );
+        );
     }
+
 
     public void resolveEmergency() {
     if (resolved) {
-        System.out.println("Emergency is already resolved.");
+        System.out.println("Emergency is resolved.");
         return;
     }
 
@@ -45,7 +55,7 @@ class EmergencyEvents {
 
     public void displayEmergencyStatus() {
     System.out.println(
-        "=== Emergency Status ===" +
+      "=== Emergency Status ===" +
         "\nType: " + emergencytype +
         "\nSeverity Level: " + severitylevel +
         "\nResolved: " + resolved
