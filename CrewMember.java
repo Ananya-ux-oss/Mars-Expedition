@@ -8,6 +8,7 @@ public class CrewMember {
 
     CrewMember(String name, int age, int health, int stamina, int experienceLevel, String role) {
         this.name = name;
+        this.age = age;
         this.health = health;
         this.stamina = stamina;
         this.experiencelevel = experiencelevel;
@@ -20,7 +21,7 @@ public class CrewMember {
         return name;
     }
 
-    public int getAge() {
+    public int getAge(int time) {
         return age;
     }
 
@@ -90,14 +91,14 @@ public class CrewMember {
 
     public void decreaseStamina(int amount) {
         stamina -= amount;
-        if(stamina < 0) {
+        if(stamina < 20) {
             stamina = 0;
         }
 
     }
 
     public void increaseStamina(int amount) {
-        if(stamina >= 100) {
+        if(stamina > 100) {
             stamina = 100;
         } else{
             stamina += amount;
