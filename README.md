@@ -46,7 +46,7 @@ This is a section highlighting where in the document core OOP concepts are outli
 | Concept | File | Line | What It Shows |
 |---------|------|------|---------------|
 | Main Class Method | `CrewMember.java` |  | `System.out.println(name + "  is performing duties");` |
-| Sub Class Method | `Scientist.java` | 40 - 43 | `public void performDuty() {conductResearch();}` |
+| Sub Class Method | `Scientist.java` | 43 - 43 | `public void performDuty() {conductResearch();}` |
 
 
 ### Overloading (Compile-time Polymorphism)
