@@ -6,16 +6,16 @@ public class MissionControlSystem {
 
         EmergencyEvents emergency = new EmergencyEvents("Oxygen Leak", 5, false);
 
-        Engineer engineer = new Engineer("Maria", 32, 85, 75, 8, "Engineer", 10);
+        Engineer engineer = new Engineer("Maria", 32, 80, 75, 8, "Engineer", 10);
 
         ArrayList<CrewMember> crewList = new ArrayList<>();
         MarsBase MarsStation = new MarsBase("Ares Base", 100.0, 100.0, 70, 70, crewList);
 
-        Medic medic = new Medic("John", 29, 90, 80, 8, "Medic", 7, 3);
+        Medic medic = new Medic("John", 29, 80, 80, 8, "Medic", 7, 3);
 
-        Pilot pilot = new Pilot("Sara", 28, 7, 85, 5, "Pilot", 8, 2);
+        Pilot pilot = new Pilot("Sara", 28, 80, 85, 5, "Pilot", 8, 2);
 
-        Scientist scientist = new Scientist("Kim", 35, 85, 70, 7, "Scientist", "Geology", 15);
+        Scientist scientist = new Scientist("Kim", 35, 80, 70, 7, "Scientist", "Geology", 15);
 
         Rover rover = new Rover("RoverX", 100, 100, true);
 
