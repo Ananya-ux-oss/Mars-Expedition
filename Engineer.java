@@ -20,15 +20,11 @@ public class Engineer extends CrewMember {
     }
 
     /* ADDsetters */
+    public void setSystemsFixed(int systemFixed){
+        this.systemsFixed = systemFixed;
+    }
 
-
-
-
-
-
-
-
-
+    //METHODS
     public void Repairsytem() {
         DecreaseStamina(10);
         systemfixed++;
@@ -40,7 +36,7 @@ public class Engineer extends CrewMember {
         System.out.println(getName() + " is maintaining station equipment.");
     }
 
-    /** over-loading  */
+    //OVERLOADING
 
     public void Repairsytem(String Systemname) {
         DecreaseStamina(10);
@@ -48,7 +44,7 @@ public class Engineer extends CrewMember {
         System.out.println(getName() + " is repairing " + Systemname );
     }
 
-    //Overloading
+    //OVERLOADING
 
     public void repairsystem(Rover damagedrover) {
         damagedrover.checksystemstatus();
@@ -67,14 +63,14 @@ public class Engineer extends CrewMember {
     @Override
     public void displayInfo() {
         System.out.println(
-                  
-                  " | NAME: " + getName()
-                + " | AGE: " + getAge()
-                + " | HEALTH: " + getHealth()
-                + " | EXPERIENCE-LEVEL: " + getExperiencelevel()
-                +  "| ROLE: " + getRole() 
-                +  "| REPAIR SKILLD: " +  repairskill
-                +  "| SYSTEMFIXED: " + systemsfixed        
+            "==== ENGINEER ===="     
+            +"\nNAME: " + getName()
+            + "\n AGE: " + getAge()
+            + "\n HEALTH: " + getHealth()
+            + "\n EXPERIENCE-LEVEL: " + getExperiencelevel()
+            +  "\n ROLE: " + getRole() 
+            +  "\n REPAIR SKILLD: " +  repairskill
+            +  "\n SYSTEMFIXED: " + systemsfixed        
         );
     }
 
