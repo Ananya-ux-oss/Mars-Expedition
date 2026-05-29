@@ -1,50 +1,46 @@
 public class Engineer extends CrewMember {
     private int systemsfixed;
 
-    Engineer(String name, int age, int health, int stamina, int experiencelevel, String role, 
+    Engineer(String name, int age, int health, int stamina, int experiencelevel, "Enginner", 
         int systemsfixed) {
             super(name, age, health, stamina, experiencelevel,role);
-            this.repairskill = repairskill;
+            this.systemsfixed = systemsfixed;
             }
 
     /* getters */
 
-    public String getRepairskill() {
-        return repairskill;
-    }
-
-    public int getSystemsfixed() {
+    public int getsystemsfixed() {
         return systemsfixed;
     }
 
     /*setters */
-    public void setSystemsFixed(int systemFixed){
+    public void setSystemsfixed(int systemFixed){
         this.systemsFixed = systemFixed;
     }
 
     //METHODS
-    public void Repairsytem() {
-        DecreaseStamina(10);
+    public void repairSytem() {
+        decreaseStamina(10);
         systemfixed++;
         System.out.println(getName() + " is performing general system repairs.");
     }
 
     public void Maintainequipment() {
-        DecreaseStamina(15);
+        decreaseStamina(15);
         System.out.println(getName() + " is maintaining station equipment.");
     }
 
     //OVERLOADING
 
-    public void Repairsytem(String Systemname) {
-        DecreaseStamina(10);
+    public void repairSytem(String Systemname) {
+        decreaseStamina(10);
         systemfixed++;
         System.out.println(getName() + " is repairing " + Systemname );
     }
 
     //OVERLOADING
 
-    public void repairsystem(Rover damagedrover) {
+    public void repairSytem(Rover damagedrover) {
         damagedrover.checksystemstatus();
         damagedrover.repair();
         decreaseStamina(10);
@@ -62,12 +58,11 @@ public class Engineer extends CrewMember {
     public void displayInfo() {
         System.out.println(
             "==== ENGINEER ===="     
-            +"\nNAME: " + getName()
-            + "\n AGE: " + getAge()
-            + "\n HEALTH: " + getHealth()
-            + "\n EXPERIENCE-LEVEL: " + getExperiencelevel()
-            +  "\n ROLE: " + getRole() 
-            +  "\n SYSTEMFIXED: " + systemsfixed        
+            +  "\nNAME: " + getName()
+            +  "\nAGE: " + getAge()
+            +  "\nHEALTH: " + getHealth()
+            +  "\nEXPERIENCE-LEVEL: " + getExperiencelevel()
+            +  "\nSYSTEMFIXED: " + systemsfixed        
         );
     }
 
