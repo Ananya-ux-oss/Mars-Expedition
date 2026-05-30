@@ -33,7 +33,7 @@ jobs:
           INVALID_FILES=0
           
           # Loop through all Java files in the feres package
-          for file in src/feres/*.java; do
+          for file in *.java; do
             filename=$(basename "$file")
           
             # Regex check: Does the filename start with a Lowercase letter?
